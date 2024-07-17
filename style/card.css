@@ -1,0 +1,204 @@
+
+.card
+{
+    width: 100%;
+    height: 100%;
+    /* width: 	354px; */
+    display: inline-block;
+    transform: rotateY(-180deg);
+    position: relative;
+    z-index: 1;
+
+}
+.card img
+{
+    width: 100%;
+    position: relative;
+    display: block;
+}
+.card img:first-child
+{
+    position: absolute;
+    z-index: 5;
+}
+
+.turn
+{
+    transition: transform 0.3s linear;
+    transform: rotateY(0deg);
+    z-index: 10;
+
+}
+.turn img:last-child
+{
+    animation: zIndexDelay 0.15s step-end forwards; 
+}
+@keyframes zIndexDelay 
+{
+    to { z-index: 11; }
+}
+
+.up
+{
+    transition: transform 0.3s linear;
+    transform: rotateY(0deg) translateX(110%);
+    /* translateY(-110%) */
+    z-index: 10;
+}
+.up img:last-child
+{
+    animation: zIndexDelay 0.15s step-end forwards; 
+}
+@keyframes zIndexDelay 
+{
+    to { z-index: 11; }
+}
+
+/* 
+.turn img:first-child
+{
+    animation: zIndexDelay 0.155s step-end forwards; 
+}
+@keyframes zIndexDelay 
+{
+    to { z-index: 10; }
+} */
+
+.stadium
+{
+    transform: rotate(0deg);
+    max-width: 1020px;
+    width: 100%;
+    margin: 15px auto;
+    display: grid;
+    grid-template-areas: 
+    ". track_0 track_1 track_2 track_3 track_4 track_5 track_6 goal"
+    " spade . . . . . . . .  "
+    " heart . . . . . . . .  "
+    " diamond . . . . . . . . "
+    " clover . . . . . . . .  "
+    " deck . . . . . . . . "
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-rows: 1fr 1fr; */
+}
+
+.goalB
+{
+    grid-area: goalB;
+    opacity: 0;
+}
+
+.goalB img
+{
+    width: 100%;
+}
+
+#deck, .track, .racehorse, .goal, .goalB
+{
+    /* width: 180px; */
+    max-width: 180px;
+    width: auto;
+    margin: 0;
+    padding: 5px 5px 0px;
+    /* padding-bottom: 10px; */
+}
+
+#deck
+{
+    grid-area: deck;
+    /* width: 250px; */
+    /* display: inline-block; */
+    position: relative;
+}
+#deck .draw
+{
+    width: calc(100% - 10px);
+    display: block;
+
+    position: absolute;
+    left: 5px;
+    transform: translateX(110%);
+}
+
+#deck .but
+{
+    width: calc(100% - 10px);
+    position: absolute; 
+    left: 5px;
+    z-index: 2;
+}
+
+.track_0
+{
+    grid-area: track_0;
+}
+.track_1
+{
+    grid-area: track_1;
+}
+.track_2
+{
+    grid-area: track_2;
+}
+.track_3
+{
+    grid-area: track_3;
+}
+.track_4
+{
+    grid-area: track_4;
+}
+.track_5
+{
+    grid-area: track_5;
+}
+.track_6
+{
+    grid-area: track_6;
+}
+
+
+.racehorse
+{
+    /* ? grid-area: race1; */
+    border: 0px;
+    transition: transform 0.2s;
+    /* transform: translateY(-0%); */
+}
+.racehorse img
+{
+    width: 100%;
+}
+.spade  
+{
+    grid-area: spade;
+    transform: translateX(-0%);
+}
+.heart
+{
+    grid-area: heart;
+    transform: translateX(-0%);
+}
+.diamond 
+{
+    grid-area: diamond;
+    transform: translateX(-0%);
+}
+.clover
+{
+    grid-area: clover;
+    transform: translateX(-0%);
+}
+
+.goal
+{
+    grid-area: goal;
+    opacity: 1;
+}
+
+.goal img
+{
+    width: 100%;
+}
+
+

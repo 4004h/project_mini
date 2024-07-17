@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드경마</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/card.css">
+    
+    <script src="./script/jquery_3.7.0_min.js"></script>
+    <script src="./script/script.js"></script>
+</head>
+<body>
+    <div class="comtiner">
+        
+
+
+
+        
+        <div class="modal">
+
+        </div>
+
+
+        <input type="checkbox" name="" id="page">
+        <div class="modal descpage">
+            <div class="modalpage">
+                <h1>게임 설명</h1>
+                <p>참가자느 자신이 지지하는 말(에이스)를 선택합니다.</p>
+                <img src="./img/설명1.PNG" alt="">
+
+                <p>한 쪽에는 장애물 카드를 7장 펼쳐놓습니다.</p>
+                <img src="./img/설명2.PNG" alt="" style="width: 100%;">
+
+                <p>선택을 마치면 후 카드뭉치에서 한장을 뒤집어 확인합니다.</p>
+                <img src="./img/설명3.PNG" alt="">
+
+                <p>뒤집은 카드와 같은 문양의 말(에이스)를 한 칸 전진시킵니다</p>
+                <img src="./img/설명4.PNG" alt="">
+
+                <p>만약 모든 말이 허들에 도달하거나 넘으면 허들 카드를 뒤집습니다.</p>
+                <img src="./img/설명5.PNG" alt="">
+
+                <p>허들카드와 문양이 같은 카드를 뒤로 한 칸 이동시킵니다.</p>
+                <img src="./img/설명6.PNG" alt="">
+
+                <p>끝까지 도달한 말이 승리합니다.</p>
+                <br>
+                <p>트랙에 무늬가 몇 개나 있는지에 따라 배당이 달라집니다.</p>
+                <!-- 표 -->
+                 <table>
+                    <tr>
+                        <th colspan="2">배율표</th>
+                    </tr>
+                    <tr>
+                        <td>무늬의 개수</td>
+                        <td>배당</td>
+                    </tr>
+                    <tr>
+                        <td>0개</td>
+                        <td>x1</td>
+                    </tr>
+                    <tr>
+                        <td>1개</td>
+                        <td>x2</td>
+                    </tr>
+                    <tr>
+                        <td>2개</td>
+                        <td>x3</td>
+                    </tr>
+                    <tr>
+                        <td>3개</td>
+                        <td>x5</td>
+                    </tr>
+                    <tr>
+                        <td>4개 이상</td>
+                        <td>x10</td>
+                    </tr>
+                 </table>
+
+
+            </div> 
+        </div>
+        <div class="desc">
+            <label for="page">
+                <div class="descbut" onclick="">
+                    <div class="stick"></div>
+                    <div class="stick"></div>
+                    <div class="stick"></div>
+                </div>
+            </label>
+        </div>
+
+
+        <div class="stadium">
+
+            <div class="scoreboard">
+                <!-- 
+                <div class="score player_0">
+                    <div class="scorecount"> 100 </div>
+                    <div class="profile"> 1 </div>
+                    <div class="select">
+                        <div class="ace select_0" onclick="select(this)"></div>
+                        <div class="ace select_1" onclick="select(this)"></div>
+                        <div class="ace select_2" onclick="select(this)"></div>
+                        <div class="ace select_3" onclick="select(this)"></div>
+                    </div>
+                    <div class="scorebetting" >
+                        <div class="bettingup" onclick="playerBetting(this, 1)">
+                            ▲
+                        </div>
+                        <div class="betting">
+                            <h3>100</h3>
+                        </div>
+                        <div class="bettingdown" onclick="playerBetting(this, -1)">
+                            ▼
+                        </div>
+                    </div>
+                </div>
+                -->
+            </div>
+
+            <div class="startbut" onclick="gameStart()">
+                <h1>
+                    START
+                </h1>
+            </div>
+
+
+            <div class="goal">
+                <img src="./img/카드goal.png" alt="">
+            </div>
+   
+
+            <div class="track track_0">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_1">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_2">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_3">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_4">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_5">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+            <div class="track track_6">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+            </div>
+    
+            <div class="racehorse spade">
+                <img src="./img/카드1.png" alt="">
+            </div>
+            <div class="racehorse heart">
+                <img src="./img/카드14.png" alt="">
+            </div>
+            <div class="racehorse diamond">
+                <img src="./img/카드27.png" alt="">
+            </div>
+            <div class="racehorse clover">
+                <img src="./img/카드40.png" alt="">
+            </div>
+    
+            <div id="deck">
+                <img class="draw" src="./img/카드뒷면.png" alt="">
+                <div class="card">
+                    <img src="./img/카드뒷면.png" alt="">
+                    <img src="./img/카드1.png" alt="">
+                </div>
+                <img onclick="cardUp()" class="but" src="./img/카드뒷면.png" alt="deckImg">
+            </div>
+
+
+        </div>
+    
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
